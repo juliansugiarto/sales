@@ -1,0 +1,11 @@
+// HOME LOGIN
+
+.ml-home
+  .container
+    .row
+      - if is_logged_in?
+        .col-sm-12
+          = link_to "Logout", session_destroy_path, class: "btn btn-lg btn-block btn-danger text-center"
+      - else
+        .col-sm-12
+          = link_to "Login", session_new_path, class: "btn btn-lg btn-block btn-success text-center"

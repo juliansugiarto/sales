@@ -1,0 +1,8 @@
+h1 Session#new
+= form_tag session_create_path , id:"form_login_only", method: "GET"
+  .form-group
+    = text_field_tag :username, "", class: "form-control"
+  .form-group
+    = text_field_tag :password, "", class: "form-control"
+
+  = submit_tag class: "btn btn-primary"

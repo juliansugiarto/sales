@@ -1,0 +1,120 @@
+// Please if you added something write with comment
+// Sribu component for typography
+
+// For all sc heading default
+[class*="m-heading__default"] {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: @color-black;
+  line-height: 2.5rem;
+  font-weight: 600;
+}
+
+// For all sc heading bright
+[class*="m-heading__bright"] {
+  font-weight: 800;
+  margin: 0;
+  color: @color-sribu;
+}
+
+// For all sc subheading
+[class*="m-subheading"] {
+  margin-top: 5px;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  color: fade(@color-black, 90%);
+}
+
+// Block heading
+.m-heading {
+
+  // Element heading
+  &__default {
+
+    // Modifier heading default
+    // XS
+    &--xs {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+    }
+
+    // SM
+    &--sm {
+      font-size: 2.1rem; //2.4
+      line-height: 4rem;
+
+      @media (max-width: @screen-xs) {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+
+    }
+
+    // MD
+    &--md {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+
+    // LG
+    &--lg {
+      font-size: 4.5rem;
+      line-height: 4rem;
+    }
+  }
+
+  // Element heading
+  &__bright {
+
+    // SM
+    &--sm {
+      font-size: 2.7rem;
+      letter-spacing: -2px;
+      line-height: 3.5rem;
+
+      @media (max-width: @screen-xs) { font-size: 2.3rem; }
+    }
+
+    // MD
+    &--md {
+      font-size: 3.5rem;
+      letter-spacing: -3px;
+      line-height: 5rem;
+
+      @media (max-width: @screen-xs) {
+        font-size: 2.6rem;
+        line-height: 3rem;
+        letter-spacing: -2px;
+      }
+    }
+
+    // LG
+    &--lg {
+      font-size: 4.5rem;
+      letter-spacing: -3px;
+      line-height: 7rem;
+    }
+  }
+}
+
+// Block subheading
+.m-subheading {
+
+  @media (max-width: @screen-xs-max) {
+    font-size: 1.4rem;
+  }
+
+  &--content {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin-top: 10px;
+  }
+
+  // Modifier subheading with divider
+  &--with-divider {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid @color-sribu;
+    margin-bottom: 30px;
+  }
+}
